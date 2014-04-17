@@ -955,8 +955,8 @@ clean: CMakeFiles/check.dir/clean
 # Target rules for target CMakeFiles/dist.dir
 
 # All Build rule for target.
-CMakeFiles/dist.dir/all: CMakeFiles/echo-dist.dir/all
 CMakeFiles/dist.dir/all: CMakeFiles/dist-dir.dir/all
+CMakeFiles/dist.dir/all: CMakeFiles/echo-dist.dir/all
 	$(MAKE) -f CMakeFiles/dist.dir/build.make CMakeFiles/dist.dir/depend
 	$(MAKE) -f CMakeFiles/dist.dir/build.make CMakeFiles/dist.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles  13

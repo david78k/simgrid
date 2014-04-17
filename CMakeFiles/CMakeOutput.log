@@ -853,3 +853,5 @@ Linking C executable cmTryCompileExec2557716915
 make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
 
 
+The target system is: Linux - 3.2.0-4-amd64 - x86_64
+The host system is: Linux - 3.2.0-4-amd64 - x86_64

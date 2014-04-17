@@ -1,0 +1,65 @@
+Log of ./migrate_vm simple_plat.xml 
+Thu Apr 17 13:50:54 2014
+
+[0.000000] [surf_vm_workstation/INFO] Create VM(VM0)@PM(PM0) with 0 mounted disks
+[PM0:master_:(1) 0.000000] [msg_test/INFO] Test: Migrate a VM with 1000 Mbytes RAM
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 0.000000] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 0.000000] [msg_vm/INFO] mig-stage1: remaining_size 1000000000.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 86.728038] [msg_vm/INFO] actual banwdidth 10.996148 (MB/s), threshold 345908.896845
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 86.728038] [msg_vm/INFO] mig-stage 2:0 updated_size 0.000000 computed_during_stage1 0.000000 dp_rate 0.000000 dp_cap 0.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 86.728038] [msg_vm/INFO] mig-stage2.0: remaining_size 0.000000 (< threshold 345908.896845)
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 86.728038] [msg_vm/INFO] mig-stage3: remaining_size 0.000000
+[PM1:__pr_mig_rx:VM0(PM0-PM1):(2) 86.858138] [msg_vm/INFO] set affinity(0x0000@PM1) for VM0
+[PM0:master_:(1) 86.988238] [msg_test/INFO] VM0 migrated: PM0->PM1 in 86.9882 s
+[86.988238] [surf_vm_workstation/INFO] Create VM(VM0)@PM(PM0) with 0 mounted disks
+[PM0:master_:(1) 86.988238] [msg_test/INFO] Test: Migrate a VM with 100 Mbytes RAM
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(7) 86.988238] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(7) 86.988238] [msg_vm/INFO] mig-stage1: remaining_size 100000000.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(7) 95.778132] [msg_vm/INFO] actual banwdidth 10.849668 (MB/s), threshold 341301.051336
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(7) 95.778132] [msg_vm/INFO] mig-stage 2:0 updated_size 0.000000 computed_during_stage1 0.000000 dp_rate 0.000000 dp_cap 0.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(7) 95.778132] [msg_vm/INFO] mig-stage2.0: remaining_size 0.000000 (< threshold 341301.051336)
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(7) 95.778132] [msg_vm/INFO] mig-stage3: remaining_size 0.000000
+[PM1:__pr_mig_rx:VM0(PM0-PM1):(6) 95.908232] [msg_vm/INFO] set affinity(0x0000@PM1) for VM0
+[PM0:master_:(1) 96.038332] [msg_test/INFO] VM0 migrated: PM0->PM1 in 9.05009 s
+[96.038332] [surf_vm_workstation/INFO] Create VM(VM0)@PM(PM0) with 0 mounted disks
+[96.038332] [surf_vm_workstation/INFO] Create VM(VM1)@PM(PM0) with 0 mounted disks
+[PM0:master_:(1) 96.038332] [msg_test/INFO] Test: Migrate two VMs at once from PM0 to PM1
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(13) 96.038332] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(13) 96.038332] [msg_vm/INFO] mig-stage1: remaining_size 1000000000.000000
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(15) 96.038332] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(15) 96.038332] [msg_vm/INFO] mig-stage1: remaining_size 1000000000.000000
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(15) 269.364308] [msg_vm/INFO] actual banwdidth 5.502201 (MB/s), threshold 173084.269550
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(15) 269.364308] [msg_vm/INFO] mig-stage 2:0 updated_size 0.000000 computed_during_stage1 0.000000 dp_rate 0.000000 dp_cap 0.000000
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(15) 269.364308] [msg_vm/INFO] mig-stage2.0: remaining_size 0.000000 (< threshold 173084.269550)
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(15) 269.364308] [msg_vm/INFO] mig-stage3: remaining_size 0.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(13) 269.364308] [msg_vm/INFO] actual banwdidth 5.502201 (MB/s), threshold 173084.269550
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(13) 269.364308] [msg_vm/INFO] mig-stage 2:0 updated_size 0.000000 computed_during_stage1 0.000000 dp_rate 0.000000 dp_cap 0.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(13) 269.364308] [msg_vm/INFO] mig-stage2.0: remaining_size 0.000000 (< threshold 173084.269550)
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(13) 269.364308] [msg_vm/INFO] mig-stage3: remaining_size 0.000000
+[PM1:__pr_mig_rx:VM1(PM0-PM1):(14) 269.494408] [msg_vm/INFO] set affinity(0x0000@PM1) for VM1
+[PM1:__pr_mig_rx:VM0(PM0-PM1):(12) 269.494408] [msg_vm/INFO] set affinity(0x0000@PM1) for VM0
+[PM0:mig_wrk:(10) 269.624508] [msg_test/INFO] VM0 migrated: PM0->PM1 in 173.586 s
+[PM0:mig_wrk:(11) 269.624508] [msg_test/INFO] VM1 migrated: PM0->PM1 in 173.586 s
+[10096.038332] [surf_vm_workstation/INFO] Create VM(VM0)@PM(PM0) with 0 mounted disks
+[10096.038332] [surf_vm_workstation/INFO] Create VM(VM1)@PM(PM0) with 0 mounted disks
+[PM0:master_:(1) 10096.038332] [msg_test/INFO] Test: Migrate two VMs at once to different PMs
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(23) 10096.038332] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(23) 10096.038332] [msg_vm/INFO] mig-stage1: remaining_size 1000000000.000000
+[PM0:__pr_mig_tx:VM1(PM0-PM2):(25) 10096.038332] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM1(PM0-PM2):(25) 10096.038332] [msg_vm/INFO] mig-stage1: remaining_size 1000000000.000000
+[PM0:__pr_mig_tx:VM1(PM0-PM2):(25) 10269.364308] [msg_vm/INFO] actual banwdidth 5.502201 (MB/s), threshold 173084.269550
+[PM0:__pr_mig_tx:VM1(PM0-PM2):(25) 10269.364308] [msg_vm/INFO] mig-stage 2:0 updated_size 0.000000 computed_during_stage1 0.000000 dp_rate 0.000000 dp_cap 0.000000
+[PM0:__pr_mig_tx:VM1(PM0-PM2):(25) 10269.364308] [msg_vm/INFO] mig-stage2.0: remaining_size 0.000000 (< threshold 173084.269550)
+[PM0:__pr_mig_tx:VM1(PM0-PM2):(25) 10269.364308] [msg_vm/INFO] mig-stage3: remaining_size 0.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(23) 10269.364308] [msg_vm/INFO] actual banwdidth 5.502201 (MB/s), threshold 173084.269550
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(23) 10269.364308] [msg_vm/INFO] mig-stage 2:0 updated_size 0.000000 computed_during_stage1 0.000000 dp_rate 0.000000 dp_cap 0.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(23) 10269.364308] [msg_vm/INFO] mig-stage2.0: remaining_size 0.000000 (< threshold 173084.269550)
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(23) 10269.364308] [msg_vm/INFO] mig-stage3: remaining_size 0.000000
+[PM2:__pr_mig_rx:VM1(PM0-PM2):(24) 10269.494408] [msg_vm/INFO] set affinity(0x0000@PM2) for VM1
+[PM1:__pr_mig_rx:VM0(PM0-PM1):(22) 10269.494408] [msg_vm/INFO] set affinity(0x0000@PM1) for VM0
+[PM0:mig_wrk:(20) 10269.624508] [msg_test/INFO] VM0 migrated: PM0->PM1 in 173.586 s
+[PM0:mig_wrk:(21) 10269.624508] [msg_test/INFO] VM1 migrated: PM0->PM2 in 173.586 s
+[20096.038332] [msg_test/INFO] Bye (simulation time 20096)
+
+Thu Apr 17 13:50:54 2014
+----------------
