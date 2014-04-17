@@ -1,0 +1,1 @@
+/root/simgrid/simgrid/smpi_script/bin/smpicc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/MM_mpi.dir/MM_mpi.c.o CMakeFiles/MM_mpi.dir/2.5D_MM.c.o CMakeFiles/MM_mpi.dir/Summa.c.o CMakeFiles/MM_mpi.dir/Matrix_init.c.o  -o MM_mpi -rdynamic ../../../lib/libsimgrid.so.3.9.90 -lpthread -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

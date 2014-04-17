@@ -1,0 +1,172 @@
+Determining if the system is big endian passed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1269585211/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1269585211.dir/build.make CMakeFiles/cmTryCompileExec1269585211.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1269585211.dir/TestEndianess.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec1269585211.dir/TestEndianess.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec1269585211
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1269585211.dir/link.txt --verbose=1
+/usr/bin/gcc         CMakeFiles/cmTryCompileExec1269585211.dir/TestEndianess.c.o  -o cmTryCompileExec1269585211 -rdynamic 
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file valgrind/valgrind.h exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1784531984/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1784531984.dir/build.make CMakeFiles/cmTryCompileExec1784531984.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1784531984.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec1784531984.dir/CheckIncludeFile.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:31: fatal error: valgrind/valgrind.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec1784531984.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1784531984/fast] Error 2
+
+
+Determining if the include file socket.h exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2182021598/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2182021598.dir/build.make CMakeFiles/cmTryCompileExec2182021598.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2182021598.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec2182021598.dir/CheckIncludeFile.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:20: fatal error: socket.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec2182021598.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2182021598/fast] Error 2
+
+
+Determining if the include file stat.h exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2482670384/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2482670384.dir/build.make CMakeFiles/cmTryCompileExec2482670384.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2482670384.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec2482670384.dir/CheckIncludeFile.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:18: fatal error: stat.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec2482670384.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2482670384/fast] Error 2
+
+
+Determining if the include file windows.h exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1172767509/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1172767509.dir/build.make CMakeFiles/cmTryCompileExec1172767509.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1172767509.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec1172767509.dir/CheckIncludeFile.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:21: fatal error: windows.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec1172767509.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec1172767509/fast] Error 2
+
+
+Determining if the include file winsock.h exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec964649636/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec964649636.dir/build.make CMakeFiles/cmTryCompileExec964649636.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec964649636.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec964649636.dir/CheckIncludeFile.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:21: fatal error: winsock.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec964649636.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec964649636/fast] Error 2
+
+
+Determining if the include file winsock2.h exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3052139644/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3052139644.dir/build.make CMakeFiles/cmTryCompileExec3052139644.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3052139644.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec3052139644.dir/CheckIncludeFile.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:22: fatal error: winsock2.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec3052139644.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3052139644/fast] Error 2
+
+
+Determining if the include file WinDef.h exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2393462596/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2393462596.dir/build.make CMakeFiles/cmTryCompileExec2393462596.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2393462596.dir/CheckIncludeFile.c.o
+/usr/bin/gcc    -o CMakeFiles/cmTryCompileExec2393462596.dir/CheckIncludeFile.c.o   -c /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/root/simgrid/simgrid/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:20: fatal error: WinDef.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec2393462596.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec2393462596/fast] Error 2
+
+
+Determining if the function mergesort exists failed with the following output:
+Change Dir: /root/simgrid/simgrid/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3101512148/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3101512148.dir/build.make CMakeFiles/cmTryCompileExec3101512148.dir/build
+make[1]: Entering directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /root/simgrid/simgrid/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3101512148.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=mergesort   -o CMakeFiles/cmTryCompileExec3101512148.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3101512148
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3101512148.dir/link.txt --verbose=1
+/usr/bin/gcc     -DCHECK_FUNCTION_EXISTS=mergesort    CMakeFiles/cmTryCompileExec3101512148.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3101512148 -rdynamic 
+CMakeFiles/cmTryCompileExec3101512148.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `mergesort'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec3101512148] Error 1
+make[1]: Leaving directory `/root/simgrid/simgrid-3.10-hypervisor/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3101512148/fast] Error 2
+
+

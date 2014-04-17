@@ -1,0 +1,61 @@
+
+###
+### Urgent stuff:
+###
+
+* Have a proper todo file
+
+
+
+
+
+
+
+
+                ************************************************
+                ***  This file is a TODO. It is thus kinda   ***
+                ***  outdated. You know the story, right?    ***
+                ************************************************
+
+
+
+
+###
+### Ongoing stuff
+###
+
+Document host module
+
+/* FIXME: better place? */
+int vasprintf  (char **ptr, const char *fmt, va_list ap);
+char *bprintf(const char*fmt, ...) _XBT_GNUC_PRINTF(1,2);
+
+###
+### Planned
+###
+
+*
+* XBT
+*****
+
+[errors/exception]
+  * Better split casual errors from programming errors.
+    The first ones should be reported to the user, the second should kill
+    the program (or, yet better, only the msg handler)
+  * Allows the use of an error handler depending on the current module (ie,
+    the same philosophy as log4c using GSL's error functions)
+
+[logs]
+  * Hijack message from a given category to another for a while (to mask
+    initializations, and more)
+  * Allow each actor to have its own setting
+  * more logging appenders (take those from Ralf in l2)
+
+[modules]
+  * Add configuration and dependencies to our module definition
+
+[other modules]
+  * we may need a round-robin database module, and a statistical one
+  * Some of the datacontainer modules seem to overlap. Kill some of them?
+    - replace fifo with dynars
+    - replace set with SWAG

@@ -1,0 +1,16 @@
+#! ./tesh
+
+p Testing the chainsend MSG implementation
+
+! timeout 60
+! output sort
+$ $SG_TEST_EXENV ${bindir:=.}/chainsend ${srcdir:=.}/platform_chainsend.xml ${srcdir:=.}/deployment_tesh.xml "--log=root.fmt:[%12.6r]%e(%i:%P@%h)%e%m%n"
+> [    0.125671] (2:peer@host1) ### 0.125671 16777216 bytes (Avg 127.316430 MB/s); copy finished (simulated).
+> [    0.157894] (3:peer@host2) ### 0.157894 16777216 bytes (Avg 101.333796 MB/s); copy finished (simulated).
+> [    0.158420] (4:peer@host3) ### 0.158420 16777216 bytes (Avg 100.997152 MB/s); copy finished (simulated).
+> [    0.159139] (5:peer@host4) ### 0.159139 16777216 bytes (Avg 100.541154 MB/s); copy finished (simulated).
+> [    0.191593] (6:peer@host5) ### 0.191593 16777216 bytes (Avg 83.510414 MB/s); copy finished (simulated).
+> [    0.191989] (7:peer@host6) ### 0.191989 16777216 bytes (Avg 83.338080 MB/s); copy finished (simulated).
+> [    0.229841] (0:@) Total simulation time: 2.298413e-01
+> [    0.229841] (8:peer@host7) ### 0.229841 16777216 bytes (Avg 69.613244 MB/s); copy finished (simulated).
+> [    0.229841] (9:peer@host8) ### 0.229841 16777216 bytes (Avg 69.613244 MB/s); copy finished (simulated).

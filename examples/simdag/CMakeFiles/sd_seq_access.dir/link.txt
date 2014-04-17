@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/sd_seq_access.dir/sd_seq_access.c.o  -o sd_seq_access -rdynamic ../../lib/libsimgrid.so.3.9.90 -lpthread -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

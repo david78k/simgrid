@@ -1,0 +1,1 @@
+/root/simgrid/simgrid/smpi_script/bin/smpicc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/pingpong.dir/pingpong.c.o  -o pingpong -rdynamic ../../lib/libsimgrid.so.3.9.90 -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

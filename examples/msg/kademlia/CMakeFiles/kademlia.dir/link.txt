@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/kademlia.dir/kademlia.c.o CMakeFiles/kademlia.dir/node.c.o CMakeFiles/kademlia.dir/routing_table.c.o CMakeFiles/kademlia.dir/task.c.o CMakeFiles/kademlia.dir/answer.c.o  -o kademlia -rdynamic ../../../lib/libsimgrid.so.3.9.90 -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

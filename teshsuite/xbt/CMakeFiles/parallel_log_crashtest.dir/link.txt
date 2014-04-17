@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/parallel_log_crashtest.dir/parallel_log_crashtest.c.o  -o parallel_log_crashtest -rdynamic ../../lib/libsimgrid.so.3.9.90 -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

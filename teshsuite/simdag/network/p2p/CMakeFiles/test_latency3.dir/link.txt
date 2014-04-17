@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/test_latency3.dir/test_latency3.c.o  -o test_latency3 -rdynamic ../../../../lib/libsimgrid.so.3.9.90 -lm -lpthread -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

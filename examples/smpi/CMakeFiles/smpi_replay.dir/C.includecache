@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/simgrid/simgrid/examples/smpi/replay/replay.c
+stdio.h
+-
+smpi/smpi.h
+/root/simgrid/simgrid/examples/smpi/replay/smpi/smpi.h
+
+include/smpi/smpi.h
+stddef.h
+-
+sys/time.h
+-
+xbt/misc.h
+-
+xbt/function_types.h
+-
+
+include/xbt/function_types.h
+xbt/misc.h
+include/xbt/xbt/misc.h
+
+include/xbt/misc.h
+

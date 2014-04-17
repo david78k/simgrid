@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/sd_io.dir/sd_io.c.o  -o sd_io -rdynamic ../../../lib/libsimgrid.so.3.9.90 -lpthread -lm -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

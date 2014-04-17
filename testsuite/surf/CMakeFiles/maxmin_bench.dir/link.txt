@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -finline-functions -funroll-loops -fno-strict-aliasing  -flto -g3   CMakeFiles/maxmin_bench.dir/maxmin_bench.c.o  -o maxmin_bench -rdynamic ../../lib/libsimgrid.so.3.9.90 -lm -lm -pthread -lrt -Wl,-rpath,/root/simgrid/simgrid/lib 

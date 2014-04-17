@@ -1,0 +1,42 @@
+#! /bin/bash
+
+CC=@CMAKE_C_COMPILER@
+
+INCLUDEARGS="@includeflag@"
+CMAKE_LINKARGS="-L@libdir@"
+
+if [ "@WIN32@" != "1" ]; then
+  CFLAGS="-Dmain=smpi_simulated_main_"
+  LINKARGS="-lsimgrid"
+else
+  CFLAGS="-include @includedir@/smpi/smpi_main.h"
+  LINKARGS="@libdir@\libsimgrid.dll"
+fi
+
+CMDLINE=""
+while [ -n "$1" ]; do
+  ARG="$1"
+  shift
+  case "${ARG}" in
+   -c)
+      CMAKE_LINKARGS=""
+      LINKARGS=""
+      CMDLINE="${CMDLINE} -c "
+      ;;
+   *.c)
+      SRCFILE="$(readlink -f ${ARG} 2>/dev/null)"
+      if [ -z $SRCFILE ] ; then
+         SRCFILE="$ARG"
+      fi
+      CMDLINE="${CMDLINE} ${SRCFILE} "
+      ;;
+   *)
+      CMDLINE="${CMDLINE} ${ARG} "
+      ;;
+  esac
+done
+
+CMDLINE="${CC} ${CFLAGS} ${CMDLINE} ${INCLUDEARGS} ${CMAKE_LINKARGS} ${LINKARGS}"
+
+#echo "${CMDLINE}"
+${CMDLINE}

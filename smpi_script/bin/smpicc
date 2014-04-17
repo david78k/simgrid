@@ -1,0 +1,42 @@
+#! /bin/bash
+
+CC=/usr/bin/gcc
+
+INCLUDEARGS="-I/root/simgrid/simgrid/include -I/root/simgrid/simgrid/include/smpi -I/root/simgrid/simgrid/include -I/root/simgrid/simgrid/include/smpi"
+CMAKE_LINKARGS="-L/root/simgrid/simgrid/lib"
+
+if [ "" != "1" ]; then
+  CFLAGS="-Dmain=smpi_simulated_main_"
+  LINKARGS="-lsimgrid"
+else
+  CFLAGS="-include /root/simgrid/simgrid/include/smpi/smpi_main.h"
+  LINKARGS="/root/simgrid/simgrid/lib\libsimgrid.dll"
+fi
+
+CMDLINE=""
+while [ -n "$1" ]; do
+  ARG="$1"
+  shift
+  case "${ARG}" in
+   -c)
+      CMAKE_LINKARGS=""
+      LINKARGS=""
+      CMDLINE="${CMDLINE} -c "
+      ;;
+   *.c)
+      SRCFILE="$(readlink -f ${ARG} 2>/dev/null)"
+      if [ -z $SRCFILE ] ; then
+         SRCFILE="$ARG"
+      fi
+      CMDLINE="${CMDLINE} ${SRCFILE} "
+      ;;
+   *)
+      CMDLINE="${CMDLINE} ${ARG} "
+      ;;
+  esac
+done
+
+CMDLINE="${CC} ${CFLAGS} ${CMDLINE} ${INCLUDEARGS} ${CMAKE_LINKARGS} ${LINKARGS}"
+
+#echo "${CMDLINE}"
+${CMDLINE}
