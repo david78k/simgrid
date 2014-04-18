@@ -11,7 +11,7 @@
 		<!-- 12500KB/s = 12.5MB/s, latency 0.01s
 			<link id="link1" bandwidth="12500000" latency="1E-2" /> 
 		-->
-		<link id="link1" bandwidth="12500000" latency="1E-2" />
+		<link id="link1" bandwidth="125000000" latency="1E-2" />
 
 		<route src="PM0" dst="PM1">
 			<link_ctn id="link1"/>

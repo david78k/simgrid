@@ -14,6 +14,23 @@ XBT_LOG_NEW_DEFAULT_CATEGORY(msg_test,
                              "Messages specific for this msg example");
 
 
+/* the main function of the worker process */
+static int worker_main(int argc, char **argv)
+{
+        /* computation size (floating operations) */
+        const double flops = 10000;
+
+        /* Repeat computation. */
+        for (;;) {
+                msg_task_t task = MSG_task_create("Task",
+                flops, 0, NULL);
+                MSG_task_execute(task);
+                MSG_task_destroy(task);
+        }
+
+        return 0;
+}
+
 static void vm_migrate(msg_vm_t vm, msg_host_t dst_pm)
 {
   msg_host_t src_pm = MSG_vm_get_pm(vm);
@@ -66,20 +83,23 @@ static int master_main(int argc, char *argv[])
   s_ws_params_t params;
   memset(&params, 0, sizeof(params));
 
-
-
+  /* migrate a 1GB VM to a PM */
   vm0 = MSG_vm_create_core(pm0, "VM0");
   params.ramsize = 1L * 1000 * 1000 * 1000; // 1Gbytes
   MSG_host_set_params(vm0, &params);
   MSG_vm_start(vm0);
+
+  /* 1. Launch a process on the VM. */
+  msg_process_t pr = MSG_process_create("worker",
+  worker_main, NULL, vm);
 
   XBT_INFO("Test: Migrate a VM with %ld Mbytes RAM", params.ramsize / 1000 / 1000);
   vm_migrate(vm0, pm1);
 
   MSG_vm_destroy(vm0);
 
-
-
+  /* migrate a 100MB VM to a PM*/
+  /*
   vm0 = MSG_vm_create_core(pm0, "VM0");
   params.ramsize = 1L * 1000 * 1000 * 100; // 100Mbytes
   MSG_host_set_params(vm0, &params);
@@ -89,9 +109,9 @@ static int master_main(int argc, char *argv[])
   vm_migrate(vm0, pm1);
 
   MSG_vm_destroy(vm0);
+  */
 
-
-
+  /* migrate two VMs to a PM */
   vm0 = MSG_vm_create_core(pm0, "VM0");
   vm1 = MSG_vm_create_core(pm0, "VM1");
 
@@ -110,7 +130,8 @@ static int master_main(int argc, char *argv[])
   MSG_vm_destroy(vm1);
 
 
-
+  /* migrate two VMs to two different PMs */
+  /*
   vm0 = MSG_vm_create_core(pm0, "VM0");
   vm1 = MSG_vm_create_core(pm0, "VM1");
 
@@ -127,7 +148,7 @@ static int master_main(int argc, char *argv[])
 
   MSG_vm_destroy(vm0);
   MSG_vm_destroy(vm1);
-
+  */
 
   return 0;
 }

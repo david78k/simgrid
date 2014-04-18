@@ -1,0 +1,6 @@
+
+gcc -o migrate_vm migrate_vm.c
+
+logsave migrate_vm.log ./migrate_vm migrate_vm.xml
+
+grep migrated migrate_vm.log
