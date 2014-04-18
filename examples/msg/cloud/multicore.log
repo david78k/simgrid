@@ -1,5 +1,5 @@
 Log of ./multicore multicore_plat.xml 
-Fri Apr 18 02:28:33 2014
+Fri Apr 18 03:01:59 2014
 
 [0.000000] [msg_test/INFO] PM0: 1 core(s), 100000000.000000 flops/s per each
 [0.000000] [msg_test/INFO] PM1: 2 core(s), 100000000.000000 flops/s per each
@@ -42,77 +42,43 @@ Fri Apr 18 02:28:33 2014
 [PM0:master:(1) 40.000000] [msg_test/INFO] Task3: 50000000.000000 fops/s
 [PM0:master:(1) 40.000000] [msg_test/INFO] ## 5. migrate all VMs to PM0 (only 1 CPU core)
 [PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM0:__pr_mig_rx:VM0(PM2-PM0):(6) 40.139180] [msg_vm/INFO] set affinity(0x0000@PM0) for VM0
-[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 40.139376] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 40.139376] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 40.139376] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM0:__pr_mig_rx:VM1(PM2-PM0):(9) 40.278556] [msg_vm/INFO] set affinity(0x0000@PM0) for VM1
-[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 40.278751] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 40.278751] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 40.278751] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM0:__pr_mig_rx:VM2(PM2-PM0):(12) 40.417932] [msg_vm/INFO] set affinity(0x0000@PM0) for VM2
-[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 40.418127] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 40.418127] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 40.418127] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM0:__pr_mig_rx:VM3(PM2-PM0):(15) 40.557307] [msg_vm/INFO] set affinity(0x0000@PM0) for VM3
-[PM0:master:(1) 50.557502] [msg_test/INFO] Task0: 27418901.631997 fops/s
-[PM0:master:(1) 50.557502] [msg_test/INFO] Task1: 27418901.631997 fops/s
-[PM0:master:(1) 50.557502] [msg_test/INFO] Task2: 26099668.591646 fops/s
-[PM0:master:(1) 50.557502] [msg_test/INFO] Task3: 26979773.340010 fops/s
-[PM0:master:(1) 60.557502] [msg_test/INFO] Task0: 25000000.000000 fops/s
-[PM0:master:(1) 60.557502] [msg_test/INFO] Task1: 25000000.000000 fops/s
-[PM0:master:(1) 60.557502] [msg_test/INFO] Task2: 25000000.000000 fops/s
-[PM0:master:(1) 60.557502] [msg_test/INFO] Task3: 25000000.000000 fops/s
-[PM0:master:(1) 60.557502] [msg_test/INFO] VM0 migrated: PM2->PM0 in 20.5575 s
-[PM0:master:(1) 60.557502] [msg_test/INFO] ## 6. migrate all VMs to PM1 (2 CPU cores, with affinity settings)
-[PM0:__pr_mig_tx:VM0(PM0-PM1):(19) 60.557502] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM0:__pr_mig_tx:VM0(PM0-PM1):(19) 60.557502] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM0:__pr_mig_tx:VM0(PM0-PM1):(19) 60.557502] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM1:__pr_mig_rx:VM0(PM0-PM1):(18) 60.696683] [msg_vm/INFO] set affinity(0x0001@PM1) for VM0
-[PM0:__pr_mig_tx:VM1(PM0-PM1):(22) 60.826783] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM0:__pr_mig_tx:VM1(PM0-PM1):(22) 60.826783] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM0:__pr_mig_tx:VM1(PM0-PM1):(22) 60.826783] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM1:__pr_mig_rx:VM1(PM0-PM1):(21) 60.965963] [msg_vm/INFO] set affinity(0x0001@PM1) for VM1
-[PM0:__pr_mig_tx:VM2(PM0-PM1):(25) 61.096063] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM0:__pr_mig_tx:VM2(PM0-PM1):(25) 61.096063] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM0:__pr_mig_tx:VM2(PM0-PM1):(25) 61.096063] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM1:__pr_mig_rx:VM2(PM0-PM1):(24) 61.235244] [msg_vm/INFO] set affinity(0x0001@PM1) for VM2
-[PM0:__pr_mig_tx:VM3(PM0-PM1):(28) 61.365344] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
-[PM0:__pr_mig_tx:VM3(PM0-PM1):(28) 61.365344] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
-[PM0:__pr_mig_tx:VM3(PM0-PM1):(28) 61.365344] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
-[PM1:__pr_mig_rx:VM3(PM0-PM1):(27) 61.504524] [msg_vm/INFO] set affinity(0x0001@PM1) for VM3
-[PM0:master:(1) 71.634624] [msg_test/INFO] Task0: 27633540.490950 fops/s
-[PM0:master:(1) 71.634624] [msg_test/INFO] Task1: 26012900.011282 fops/s
-[PM0:master:(1) 71.634624] [msg_test/INFO] Task2: 26012900.011282 fops/s
-[PM0:master:(1) 71.634624] [msg_test/INFO] Task3: 27633540.490950 fops/s
-[PM0:master:(1) 81.634624] [msg_test/INFO] Task0: 25000000.000000 fops/s
-[PM0:master:(1) 81.634624] [msg_test/INFO] Task1: 25000000.000000 fops/s
-[PM0:master:(1) 81.634624] [msg_test/INFO] Task2: 25000000.000000 fops/s
-[PM0:master:(1) 81.634624] [msg_test/INFO] Task3: 25000000.000000 fops/s
-[PM0:master:(1) 81.634624] [msg_test/INFO] ## 7. clear affinity settings on PM1
-[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM0
-[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM1
-[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM2
-[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM3
-[PM0:master:(1) 91.634624] [msg_test/INFO] Task0: 50000000.000000 fops/s
-[PM0:master:(1) 91.634624] [msg_test/INFO] Task1: 50000000.000000 fops/s
-[PM0:master:(1) 91.634624] [msg_test/INFO] Task2: 50000000.000000 fops/s
-[PM0:master:(1) 91.634624] [msg_test/INFO] Task3: 50000000.000000 fops/s
-[PM0:master:(1) 101.634624] [msg_test/INFO] Task0: 50000000.000000 fops/s
-[PM0:master:(1) 101.634624] [msg_test/INFO] Task1: 50000000.000000 fops/s
-[PM0:master:(1) 101.634624] [msg_test/INFO] Task2: 50000000.000000 fops/s
-[PM0:master:(1) 101.634624] [msg_test/INFO] Task3: 50000000.000000 fops/s
-[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
-[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
-[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
-[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
-[VM0:worker0:(2) 111.634624] [msg_test/INFO] task 0x21bb3f0 bye
-[VM1:worker1:(3) 111.634624] [msg_test/INFO] task 0x21bb8e0 bye
-[VM2:worker2:(4) 111.634624] [msg_test/INFO] task 0x21bbdd0 bye
-[VM3:worker3:(5) 111.634624] [msg_test/INFO] task 0x21bc2e0 bye
-[111.634624] [msg_test/INFO] Bye (simulation time 111.635)
+[PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] [msg_vm/INFO] mig-stage1: remaining_size 1048576000.000000
+[PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] [msg_vm/INFO] mig-stage3: remaining_size 1048576000.000000
+[PM0:__pr_mig_rx:VM0(PM2-PM0):(6) 49.210552] [msg_vm/INFO] set affinity(0x0000@PM0) for VM0
+[PM0:master:(1) 49.210747] [msg_test/INFO] VM0 migrated: PM2->PM0 in 9.21075 s
+[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 49.210747] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 49.210747] [msg_vm/INFO] mig-stage1: remaining_size 1048576000.000000
+[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 49.210747] [msg_vm/INFO] mig-stage3: remaining_size 1048576000.000000
+[PM0:__pr_mig_rx:VM1(PM2-PM0):(9) 58.421299] [msg_vm/INFO] set affinity(0x0000@PM0) for VM1
+[PM0:master:(1) 58.421494] [msg_test/INFO] VM1 migrated: PM2->PM0 in 9.21075 s
+[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 58.421494] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 58.421494] [msg_vm/INFO] mig-stage1: remaining_size 1048576000.000000
+[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 58.421494] [msg_vm/INFO] mig-stage3: remaining_size 1048576000.000000
+[PM0:__pr_mig_rx:VM2(PM2-PM0):(12) 67.632046] [msg_vm/INFO] set affinity(0x0000@PM0) for VM2
+[PM0:master:(1) 67.632241] [msg_test/INFO] VM2 migrated: PM2->PM0 in 9.21075 s
+[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 67.632241] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 67.632241] [msg_vm/INFO] mig-stage1: remaining_size 1048576000.000000
+[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 67.632241] [msg_vm/INFO] mig-stage3: remaining_size 1048576000.000000
+[PM0:__pr_mig_rx:VM3(PM2-PM0):(15) 76.842793] [msg_vm/INFO] set affinity(0x0000@PM0) for VM3
+[PM0:master:(1) 76.842988] [msg_test/INFO] VM3 migrated: PM2->PM0 in 9.21075 s
+[PM0:master:(1) 76.842988] [msg_test/INFO] VM0-VM3 migrated: PM2->PM0 in 36.843 s
+[PM0:master:(1) 86.842988] [msg_test/INFO] Task0: 61048561.151580 fops/s
+[PM0:master:(1) 86.842988] [msg_test/INFO] Task1: 61048561.151580 fops/s
+[PM0:master:(1) 86.842988] [msg_test/INFO] Task2: 41385747.467584 fops/s
+[PM0:master:(1) 86.842988] [msg_test/INFO] Task3: 54494428.798866 fops/s
+[PM0:master:(1) 96.842988] [msg_test/INFO] Task0: 25000000.000000 fops/s
+[PM0:master:(1) 96.842988] [msg_test/INFO] Task1: 25000000.000000 fops/s
+[PM0:master:(1) 96.842988] [msg_test/INFO] Task2: 25000000.000000 fops/s
+[PM0:master:(1) 96.842988] [msg_test/INFO] Task3: 25000000.000000 fops/s
+[96.842988] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[96.842988] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[96.842988] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[96.842988] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[VM0:worker0:(2) 106.842988] [msg_test/INFO] task 0x21823f0 bye
+[VM1:worker1:(3) 106.842988] [msg_test/INFO] task 0x21828e0 bye
+[VM2:worker2:(4) 106.842988] [msg_test/INFO] task 0x2182dd0 bye
+[VM3:worker3:(5) 106.842988] [msg_test/INFO] task 0x21832e0 bye
+[106.842988] [msg_test/INFO] Bye (simulation time 106.843)
 
-Fri Apr 18 02:28:33 2014
+Fri Apr 18 03:02:00 2014
 ----------------

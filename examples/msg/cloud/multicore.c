@@ -188,7 +188,8 @@ static void test_vm_pin(void)
 
   s_ws_params_t params;
   memset(&params, 0, sizeof(params));
-  params.ramsize = 1L * 1024 * 1024;
+  //params.ramsize = 1L * 1024 * 1024; // 1MB
+  params.ramsize = 1L * 1024 * 1024 * 1000; // 1GB
   params.skip_stage1 = 1;
   params.skip_stage2 = 1;
   //params.mig_speed = 1L * 1024 * 1024;
@@ -278,29 +279,30 @@ static void test_vm_pin(void)
   msg_host_t dst_pm = pm0;
   double mig_sta = MSG_get_clock();
 
-  MSG_vm_migrate(vm0, pm0);
-  MSG_vm_migrate(vm1, pm0);
-  MSG_vm_migrate(vm2, pm0);
-  MSG_vm_migrate(vm3, pm0);
-
-  MSG_process_sleep(10);
-  task_data_get_clock(&t0);
-  task_data_get_clock(&t1);
-  task_data_get_clock(&t2);
-  task_data_get_clock(&t3);
-
-  MSG_process_sleep(10);
-  task_data_get_clock(&t0);
-  task_data_get_clock(&t1);
-  task_data_get_clock(&t2);
-  task_data_get_clock(&t3);
+  vm_migrate(vm0, pm0);
+  vm_migrate(vm1, pm0);
+  vm_migrate(vm2, pm0);
+  vm_migrate(vm3, pm0);
 
   double mig_end = MSG_get_clock();
 
-  XBT_INFO("%s migrated: %s->%s in %g s", MSG_vm_get_name(vm0),
+  XBT_INFO("%s-%s migrated: %s->%s in %g s", MSG_vm_get_name(vm0), MSG_vm_get_name(vm3),
                   MSG_host_get_name(src_pm), MSG_host_get_name(dst_pm),
                   mig_end - mig_sta);
 
+  MSG_process_sleep(10);
+  task_data_get_clock(&t0);
+  task_data_get_clock(&t1);
+  task_data_get_clock(&t2);
+  task_data_get_clock(&t3);
+
+  MSG_process_sleep(10);
+  task_data_get_clock(&t0);
+  task_data_get_clock(&t1);
+  task_data_get_clock(&t2);
+  task_data_get_clock(&t3);
+
+/*
   XBT_INFO("## 6. migrate all VMs to PM1 (2 CPU cores, with affinity settings)");
   MSG_vm_migrate(vm0, pm1);
   MSG_vm_migrate(vm1, pm1);
@@ -337,7 +339,7 @@ static void test_vm_pin(void)
   task_data_get_clock(&t1);
   task_data_get_clock(&t2);
   task_data_get_clock(&t3);
-
+*/
 
   /* clean up everything */
   MSG_task_cancel(t0.task);
