@@ -1,0 +1,17 @@
+Log of ./migrate_vm migrate_vm.xml 
+Thu Apr 17 21:28:28 2014
+
+[0.000000] [surf_vm_workstation/INFO] Create VM(VM0)@PM(PM0) with 0 mounted disks
+[PM0:master_:(1) 0.000000] [msg_test/INFO] Test: Migrate a VM with 1000 Mbytes RAM
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 0.000000] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 0.000000] [msg_vm/INFO] mig-stage1: remaining_size 1000000000.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 8.789894] [msg_vm/INFO] actual banwdidth 108.496682 (MB/s), threshold 3413010.513363
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 8.789894] [msg_vm/INFO] mig-stage 2:0 updated_size 0.000000 computed_during_stage1 0.000000 dp_rate 0.000000 dp_cap 0.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 8.789894] [msg_vm/INFO] mig-stage2.0: remaining_size 0.000000 (< threshold 3413010.513363)
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(3) 8.789894] [msg_vm/INFO] mig-stage3: remaining_size 0.000000
+[PM1:__pr_mig_rx:VM0(PM0-PM1):(2) 8.919994] [msg_vm/INFO] set affinity(0x0000@PM1) for VM0
+[PM0:master_:(1) 9.050094] [msg_test/INFO] VM0 migrated: PM0->PM1 in 9.05009 s
+[9.050094] [msg_test/INFO] Bye (simulation time 9.05009)
+
+Thu Apr 17 21:28:28 2014
+----------------

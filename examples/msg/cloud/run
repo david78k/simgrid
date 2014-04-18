@@ -1,6 +1,11 @@
+#!/bin/bash
 
-gcc -o migrate_vm migrate_vm.c
+make multicore
 
-logsave migrate_vm.log ./migrate_vm migrate_vm.xml
+logsave multicore.log ./multicore multicore_plat.xml
 
-grep migrated migrate_vm.log
+#make migrate_vm
+
+#logsave migrate_vm.log ./migrate_vm migrate_vm.xml
+
+#grep migrated migrate_vm.log

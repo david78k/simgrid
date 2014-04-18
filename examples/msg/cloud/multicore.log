@@ -1,0 +1,118 @@
+Log of ./multicore multicore_plat.xml 
+Fri Apr 18 02:28:33 2014
+
+[0.000000] [msg_test/INFO] PM0: 1 core(s), 100000000.000000 flops/s per each
+[0.000000] [msg_test/INFO] PM1: 2 core(s), 100000000.000000 flops/s per each
+[0.000000] [msg_test/INFO] PM2: 4 core(s), 100000000.000000 flops/s per each
+[PM0:master:(1) 0.000000] [msg_test/INFO] === Test VM (set affinity) ===
+[0.000000] [surf_vm_workstation/INFO] Create VM(VM0)@PM(PM2) with 0 mounted disks
+[0.000000] [surf_vm_workstation/INFO] Create VM(VM1)@PM(PM2) with 0 mounted disks
+[0.000000] [surf_vm_workstation/INFO] Create VM(VM2)@PM(PM2) with 0 mounted disks
+[0.000000] [surf_vm_workstation/INFO] Create VM(VM3)@PM(PM2) with 0 mounted disks
+[PM0:master:(1) 0.000000] [msg_test/INFO] ## 1. start 4 VMs on PM2 (4 cores)
+[PM0:master:(1) 10.000000] [msg_test/INFO] Task0: 100000000.000000 fops/s
+[PM0:master:(1) 10.000000] [msg_test/INFO] Task1: 100000000.000000 fops/s
+[PM0:master:(1) 10.000000] [msg_test/INFO] Task2: 100000000.000000 fops/s
+[PM0:master:(1) 10.000000] [msg_test/INFO] Task3: 100000000.000000 fops/s
+[PM0:master:(1) 10.000000] [msg_test/INFO] ## 2. pin all VMs to CPU0 of PM2
+[PM0:master:(1) 10.000000] [msg_vm/INFO] set affinity(0x0001@PM2) for VM0
+[PM0:master:(1) 10.000000] [msg_vm/INFO] set affinity(0x0001@PM2) for VM1
+[PM0:master:(1) 10.000000] [msg_vm/INFO] set affinity(0x0001@PM2) for VM2
+[PM0:master:(1) 10.000000] [msg_vm/INFO] set affinity(0x0001@PM2) for VM3
+[PM0:master:(1) 20.000000] [msg_test/INFO] Task0: 25000000.000000 fops/s
+[PM0:master:(1) 20.000000] [msg_test/INFO] Task1: 25000000.000000 fops/s
+[PM0:master:(1) 20.000000] [msg_test/INFO] Task2: 25000000.000000 fops/s
+[PM0:master:(1) 20.000000] [msg_test/INFO] Task3: 25000000.000000 fops/s
+[PM0:master:(1) 20.000000] [msg_test/INFO] ## 3. pin all VMs to CPU0 of PM1 (no effect at now)
+[PM0:master:(1) 20.000000] [msg_vm/INFO] set affinity(0x0001@PM1) for VM0 (not active now)
+[PM0:master:(1) 20.000000] [msg_vm/INFO] set affinity(0x0001@PM1) for VM1 (not active now)
+[PM0:master:(1) 20.000000] [msg_vm/INFO] set affinity(0x0001@PM1) for VM2 (not active now)
+[PM0:master:(1) 20.000000] [msg_vm/INFO] set affinity(0x0001@PM1) for VM3 (not active now)
+[PM0:master:(1) 30.000000] [msg_test/INFO] Task0: 25000000.000000 fops/s
+[PM0:master:(1) 30.000000] [msg_test/INFO] Task1: 25000000.000000 fops/s
+[PM0:master:(1) 30.000000] [msg_test/INFO] Task2: 25000000.000000 fops/s
+[PM0:master:(1) 30.000000] [msg_test/INFO] Task3: 25000000.000000 fops/s
+[PM0:master:(1) 30.000000] [msg_test/INFO] ## 4. unpin VM0, and pin VM2 and VM3 to CPU1 of PM2
+[PM0:master:(1) 30.000000] [msg_vm/INFO] set affinity(0x0000@PM2) for VM0
+[PM0:master:(1) 30.000000] [msg_vm/INFO] set affinity(0x0002@PM2) for VM2
+[PM0:master:(1) 30.000000] [msg_vm/INFO] set affinity(0x0002@PM2) for VM3
+[PM0:master:(1) 40.000000] [msg_test/INFO] Task0: 100000000.000000 fops/s
+[PM0:master:(1) 40.000000] [msg_test/INFO] Task1: 100000000.000000 fops/s
+[PM0:master:(1) 40.000000] [msg_test/INFO] Task2: 50000000.000000 fops/s
+[PM0:master:(1) 40.000000] [msg_test/INFO] Task3: 50000000.000000 fops/s
+[PM0:master:(1) 40.000000] [msg_test/INFO] ## 5. migrate all VMs to PM0 (only 1 CPU core)
+[PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM2:__pr_mig_tx:VM0(PM2-PM0):(7) 40.000000] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM0:__pr_mig_rx:VM0(PM2-PM0):(6) 40.139180] [msg_vm/INFO] set affinity(0x0000@PM0) for VM0
+[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 40.139376] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 40.139376] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM2:__pr_mig_tx:VM1(PM2-PM0):(10) 40.139376] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM0:__pr_mig_rx:VM1(PM2-PM0):(9) 40.278556] [msg_vm/INFO] set affinity(0x0000@PM0) for VM1
+[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 40.278751] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 40.278751] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM2:__pr_mig_tx:VM2(PM2-PM0):(13) 40.278751] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM0:__pr_mig_rx:VM2(PM2-PM0):(12) 40.417932] [msg_vm/INFO] set affinity(0x0000@PM0) for VM2
+[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 40.418127] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 40.418127] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM2:__pr_mig_tx:VM3(PM2-PM0):(16) 40.418127] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM0:__pr_mig_rx:VM3(PM2-PM0):(15) 40.557307] [msg_vm/INFO] set affinity(0x0000@PM0) for VM3
+[PM0:master:(1) 50.557502] [msg_test/INFO] Task0: 27418901.631997 fops/s
+[PM0:master:(1) 50.557502] [msg_test/INFO] Task1: 27418901.631997 fops/s
+[PM0:master:(1) 50.557502] [msg_test/INFO] Task2: 26099668.591646 fops/s
+[PM0:master:(1) 50.557502] [msg_test/INFO] Task3: 26979773.340010 fops/s
+[PM0:master:(1) 60.557502] [msg_test/INFO] Task0: 25000000.000000 fops/s
+[PM0:master:(1) 60.557502] [msg_test/INFO] Task1: 25000000.000000 fops/s
+[PM0:master:(1) 60.557502] [msg_test/INFO] Task2: 25000000.000000 fops/s
+[PM0:master:(1) 60.557502] [msg_test/INFO] Task3: 25000000.000000 fops/s
+[PM0:master:(1) 60.557502] [msg_test/INFO] VM0 migrated: PM2->PM0 in 20.5575 s
+[PM0:master:(1) 60.557502] [msg_test/INFO] ## 6. migrate all VMs to PM1 (2 CPU cores, with affinity settings)
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(19) 60.557502] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(19) 60.557502] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM0:__pr_mig_tx:VM0(PM0-PM1):(19) 60.557502] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM1:__pr_mig_rx:VM0(PM0-PM1):(18) 60.696683] [msg_vm/INFO] set affinity(0x0001@PM1) for VM0
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(22) 60.826783] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(22) 60.826783] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM0:__pr_mig_tx:VM1(PM0-PM1):(22) 60.826783] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM1:__pr_mig_rx:VM1(PM0-PM1):(21) 60.965963] [msg_vm/INFO] set affinity(0x0001@PM1) for VM1
+[PM0:__pr_mig_tx:VM2(PM0-PM1):(25) 61.096063] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM2(PM0-PM1):(25) 61.096063] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM0:__pr_mig_tx:VM2(PM0-PM1):(25) 61.096063] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM1:__pr_mig_rx:VM2(PM0-PM1):(24) 61.235244] [msg_vm/INFO] set affinity(0x0001@PM1) for VM2
+[PM0:__pr_mig_tx:VM3(PM0-PM1):(28) 61.365344] /root/simgrid/simgrid/src/msg/msg_vm.c:947: [msg_vm/WARNING] use the default max_downtime value 30ms
+[PM0:__pr_mig_tx:VM3(PM0-PM1):(28) 61.365344] [msg_vm/INFO] mig-stage1: remaining_size 1048576.000000
+[PM0:__pr_mig_tx:VM3(PM0-PM1):(28) 61.365344] [msg_vm/INFO] mig-stage3: remaining_size 1048576.000000
+[PM1:__pr_mig_rx:VM3(PM0-PM1):(27) 61.504524] [msg_vm/INFO] set affinity(0x0001@PM1) for VM3
+[PM0:master:(1) 71.634624] [msg_test/INFO] Task0: 27633540.490950 fops/s
+[PM0:master:(1) 71.634624] [msg_test/INFO] Task1: 26012900.011282 fops/s
+[PM0:master:(1) 71.634624] [msg_test/INFO] Task2: 26012900.011282 fops/s
+[PM0:master:(1) 71.634624] [msg_test/INFO] Task3: 27633540.490950 fops/s
+[PM0:master:(1) 81.634624] [msg_test/INFO] Task0: 25000000.000000 fops/s
+[PM0:master:(1) 81.634624] [msg_test/INFO] Task1: 25000000.000000 fops/s
+[PM0:master:(1) 81.634624] [msg_test/INFO] Task2: 25000000.000000 fops/s
+[PM0:master:(1) 81.634624] [msg_test/INFO] Task3: 25000000.000000 fops/s
+[PM0:master:(1) 81.634624] [msg_test/INFO] ## 7. clear affinity settings on PM1
+[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM0
+[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM1
+[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM2
+[PM0:master:(1) 81.634624] [msg_vm/INFO] set affinity(0x0000@PM1) for VM3
+[PM0:master:(1) 91.634624] [msg_test/INFO] Task0: 50000000.000000 fops/s
+[PM0:master:(1) 91.634624] [msg_test/INFO] Task1: 50000000.000000 fops/s
+[PM0:master:(1) 91.634624] [msg_test/INFO] Task2: 50000000.000000 fops/s
+[PM0:master:(1) 91.634624] [msg_test/INFO] Task3: 50000000.000000 fops/s
+[PM0:master:(1) 101.634624] [msg_test/INFO] Task0: 50000000.000000 fops/s
+[PM0:master:(1) 101.634624] [msg_test/INFO] Task1: 50000000.000000 fops/s
+[PM0:master:(1) 101.634624] [msg_test/INFO] Task2: 50000000.000000 fops/s
+[PM0:master:(1) 101.634624] [msg_test/INFO] Task3: 50000000.000000 fops/s
+[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[101.634624] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
+[VM0:worker0:(2) 111.634624] [msg_test/INFO] task 0x21bb3f0 bye
+[VM1:worker1:(3) 111.634624] [msg_test/INFO] task 0x21bb8e0 bye
+[VM2:worker2:(4) 111.634624] [msg_test/INFO] task 0x21bbdd0 bye
+[VM3:worker3:(5) 111.634624] [msg_test/INFO] task 0x21bc2e0 bye
+[111.634624] [msg_test/INFO] Bye (simulation time 111.635)
+
+Fri Apr 18 02:28:33 2014
+----------------

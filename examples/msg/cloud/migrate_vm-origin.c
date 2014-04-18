@@ -84,24 +84,36 @@ static int master_main(int argc, char *argv[])
   memset(&params, 0, sizeof(params));
 
   /* migrate a 1GB VM to a PM */
-/*
   vm0 = MSG_vm_create_core(pm0, "VM0");
   params.ramsize = 1L * 1000 * 1000 * 1000; // 1Gbytes
   MSG_host_set_params(vm0, &params);
   MSG_vm_start(vm0);
-*/
+
   /* Launch a process on the VM. */
-/*
-  msg_process_t pr = MSG_process_create("worker", worker_main, NULL, vm0);
+  msg_process_t pr = MSG_process_create("worker",
+  worker_main, NULL, vm0);
 
   XBT_INFO("Test: Migrate a VM with %ld Mbytes RAM", params.ramsize / 1000 / 1000);
   vm_migrate(vm0, pm1);
 
   MSG_process_kill(pr);
   MSG_vm_destroy(vm0);
-*/
+
+  /* migrate a 100MB VM to a PM*/
+  /*
+  vm0 = MSG_vm_create_core(pm0, "VM0");
+  params.ramsize = 1L * 1000 * 1000 * 100; // 100Mbytes
+  MSG_host_set_params(vm0, &params);
+  MSG_vm_start(vm0);
+
+  XBT_INFO("Test: Migrate a VM with %ld Mbytes RAM", params.ramsize / 1000 / 1000);
+  vm_migrate(vm0, pm1);
+
+  MSG_vm_destroy(vm0);
+  */
 
   /* migrate two VMs to a PM */
+  /*
   vm0 = MSG_vm_create_core(pm0, "VM0");
   vm1 = MSG_vm_create_core(pm0, "VM1");
 
@@ -111,17 +123,14 @@ static int master_main(int argc, char *argv[])
   MSG_vm_start(vm0);
   MSG_vm_start(vm1);
 
-  //msg_process_t pr = MSG_process_create("worker", worker_main, NULL, vm0);
-
   XBT_INFO("Test: Migrate two VMs at once from PM0 to PM1");
   vm_migrate_async(vm0, pm1);
   vm_migrate_async(vm1, pm1);
   MSG_process_sleep(10000);
 
-  //MSG_process_kill(pr);
-
   MSG_vm_destroy(vm0);
   MSG_vm_destroy(vm1);
+  */
 
   /* migrate two VMs to two different PMs */
   /*
