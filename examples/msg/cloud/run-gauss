@@ -1,0 +1,25 @@
+#!/bin/bash
+
+gcc -o gauss.o gauss.c -lm
+
+# usage: mu sigma samples bins [min] [max] 
+mu=0
+sigma=1
+samples=50000
+bins=70
+./gauss.o $mu $sigma $samples $bins
+
+mu=10
+sigma=4
+samples=50000
+bins=70
+./gauss.o $mu $sigma $samples $bins
+
+mu=10
+sigma=4
+samples=50000
+bins=70
+min="-5"
+max=5
+./gauss.o $mu $sigma $samples $bins $min $max
+
