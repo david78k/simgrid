@@ -8,8 +8,10 @@
 #define MAX_WIDTH 240
 #define TWO_PI 6.2831853071795864769252866
  
+double normal(double mean, double stdev);
 double randn (double mu, double sigma);
 double gauss(const double variance);
+double exponential(double mean);
 
 /* Arguments: ./a.out mu sigma samples bins [min] [max] */
  
@@ -63,7 +65,9 @@ main (int argc, char *argv[])
   for (count = 0; count < samples; count++)
     {
       /* Generate random numbers from a distribution, Normal for this */
-      current_random_no = randn (mu, std);
+      //current_random_no = randn (mu, std);
+      //current_random_no = normal (mu, std);
+      current_random_no = exponential (mu);
  
       /* Check which range the current sample falls */
       for (i = 0, bin = -1; i < bins; i++)
@@ -132,6 +136,30 @@ main (int argc, char *argv[])
   return 0;
 }
 
+double exponential(double mean)
+{
+        //Generate a random number between 0 and 1.
+        //REMEMBER: Always cast the oparands of a division to double, or truncation will be performed.
+        double R;
+        R = (double)rand()/((double)RAND_MAX+1);
+
+        //Put it as a parameter to the inverse distribution function.
+        return  -mean*log(R);
+}
+
+// normal distribution random number
+double normal(double mean, double stdev)
+{
+
+        double R1;
+        R1 = (double)rand()/((double)RAND_MAX+1);
+        double R2;
+        R2 = (double)rand()/((double)RAND_MAX+1);
+        return mean + stdev*cos(2*3.14*R1)*sqrt(-log(R2));
+}
+
+
+// Gaussian random number
 double randn (double mu, double sigma)
 {
   double U1, U2, W, mult;

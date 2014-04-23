@@ -48,7 +48,7 @@ void main(int argc, char **argv)
 	
 	printf("Constant: %f\n",Constant(mean));
 	printf("Uniform [0,1]: %f\n",Uniform(mean));
-	printf("Exponential [0, 1]: %f\n",Exponential(mean));
+	printf("Exponential [0,1]: %f\n",Exponential(mean));
 	printf("Poisson: %d\n",Poisson(mean));
 	printf("Pareto: %f\n",Pareto(mean)); // alpha
 	printf("Geometric: %d\n",Geometric(mean)); // p

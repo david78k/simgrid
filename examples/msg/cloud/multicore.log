@@ -1,5 +1,5 @@
 Log of ./multicore multicore_plat.xml 
-Fri Apr 18 03:01:59 2014
+Wed Apr 23 14:24:27 2014
 
 [0.000000] [msg_test/INFO] PM0: 1 core(s), 100000000.000000 flops/s per each
 [0.000000] [msg_test/INFO] PM1: 2 core(s), 100000000.000000 flops/s per each
@@ -74,11 +74,11 @@ Fri Apr 18 03:01:59 2014
 [96.842988] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
 [96.842988] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
 [96.842988] /root/simgrid/simgrid/src/surf/vm_workstation.c:459: [surf_vm_workstation/CRITICAL] FIXME: Not yet implemented. Reduce dummy action's cost by 10000000000000000.000000
-[VM0:worker0:(2) 106.842988] [msg_test/INFO] task 0x21823f0 bye
-[VM1:worker1:(3) 106.842988] [msg_test/INFO] task 0x21828e0 bye
-[VM2:worker2:(4) 106.842988] [msg_test/INFO] task 0x2182dd0 bye
-[VM3:worker3:(5) 106.842988] [msg_test/INFO] task 0x21832e0 bye
+[VM0:worker0:(2) 106.842988] [msg_test/INFO] task 0x26c03f0 bye
+[VM1:worker1:(3) 106.842988] [msg_test/INFO] task 0x26c08e0 bye
+[VM2:worker2:(4) 106.842988] [msg_test/INFO] task 0x26c0dd0 bye
+[VM3:worker3:(5) 106.842988] [msg_test/INFO] task 0x26c12e0 bye
 [106.842988] [msg_test/INFO] Bye (simulation time 106.843)
 
-Fri Apr 18 03:02:00 2014
+Wed Apr 23 14:24:27 2014
 ----------------
