@@ -132,37 +132,6 @@ main (int argc, char *argv[])
   return 0;
 }
 
-/*
-main() {
-	int i = 0, len = 0;
-	char *str = "";
-	int rnum = -1; 
-*/	/*
-	rnum = gauss(0);
-	rnum = gauss(0.2);
-	rnum = gauss(1);
-	//rnum = gauss(0.5);
-	*/
-/*	double mu = 5.0;
-	double sigma = 1.0;
-
-	for (i = 0; i < 10; i ++) {
-		rnum = randn(mu, sigma);
-		printf("%d %f\n", i, rnum);	
-		int j = 0;
-		for(j = 0; j < len; j ++)
-			str += '*';
-		//printf("%d %s\n", i, str);	
-	}
-*/
-/*
-	for(auto p : hist) {
-        std::cout << std::fixed << std::setprecision(1) << std::setw(2)
-                  << p.first << ' ' << std::string(p.second/200, '*') << '\n';
-    }
-*/
-//}
-
 double randn (double mu, double sigma)
 {
   double U1, U2, W, mult;
