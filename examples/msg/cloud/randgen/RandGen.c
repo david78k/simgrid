@@ -43,13 +43,13 @@ void main(int argc, char **argv)
 
 	printf("RAND_MAX = %d\n", RAND_MAX);
 
-	printf("Give Mean Value:");
+	//printf("Give Mean Value:");
 	//scanf("%f",&mean);
 	
-	printf("\nConstant: %f\n",Constant(mean));
+	printf("Constant: %f\n",Constant(mean));
 	printf("Uniform [0,1]: %f\n",Uniform(mean));
 	printf("Exponential [0, 1]: %f\n",Exponential(mean));
-	//printf("Poisson: %d\n",Poisson(mean));
+	printf("Poisson: %d\n",Poisson(mean));
 	printf("Pareto: %f\n",Pareto(mean)); // alpha
 	printf("Geometric: %d\n",Geometric(mean)); // p
 	if (argc > 2) {
@@ -106,7 +106,7 @@ int Poisson(double mean) //Special technique required: Box-Muller method...
 	while(sum <=mean)
 	{
 
-		R = (double)rand()/(double)RAND_MAX+1;
+		R = (double)rand()/((double)RAND_MAX+1);
 		z = -log(R);
 		sum+= z;
 		i++;
@@ -146,7 +146,7 @@ int Geometric(double p)
 double Weibull(double scale, double shape)
 {
 	double R;
-	R= (double)rand()/(double)RAND_MAX+1;
+	R= (double)rand()/((double)RAND_MAX+1);
 	return scale*pow(-log(R),(double)1/shape);
 }
 
