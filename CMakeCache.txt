@@ -84,7 +84,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
 //Fortran compiler.
-CMAKE_Fortran_COMPILER:FILEPATH=
+CMAKE_Fortran_COMPILER:FILEPATH=/usr/local/bin/smpiff
 
 //Path to a program.
 CMAKE_Fortran_COMPILER_WITH_PATH:FILEPATH=CMAKE_Fortran_COMPILER_WITH_PATH-NOTFOUND
@@ -312,6 +312,36 @@ JAVACOMMAND:FILEPATH=/usr/bin/java
 //Path to a file.
 JAVADOC_PATH:PATH=/usr/bin
 
+//Path to a file.
+JAVA_AWT_INCLUDE_PATH:PATH=/usr/lib/jvm/java-8-oracle/include
+
+//Path to a library.
+JAVA_AWT_LIBRARY:FILEPATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjawt.so
+
+//Path to a file.
+JAVA_INCLUDE_PATH:PATH=/usr/lib/jvm/java-8-oracle/include
+
+//Path to a file.
+JAVA_INCLUDE_PATH2:PATH=/usr/lib/jvm/java-8-oracle/include/linux
+
+//Path to a library.
+JAVA_JVM_LIBRARY:FILEPATH=/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so
+
+//Path to a program.
+Java_JAR_EXECUTABLE:FILEPATH=/usr/lib/jvm/java-8-oracle/bin/jar
+
+//Path to a program.
+Java_JAVAC_EXECUTABLE:FILEPATH=/usr/lib/jvm/java-8-oracle/bin/javac
+
+//Path to a program.
+Java_JAVADOC_EXECUTABLE:FILEPATH=/usr/lib/jvm/java-8-oracle/bin/javadoc
+
+//Path to a program.
+Java_JAVAH_EXECUTABLE:FILEPATH=/usr/lib/jvm/java-8-oracle/bin/javah
+
+//Path to a program.
+Java_JAVA_EXECUTABLE:FILEPATH=/usr/lib/jvm/java-8-oracle/bin/java
+
 //Command to build the project
 MAKECOMMAND:STRING=/usr/bin/make -i
 
@@ -363,7 +393,7 @@ enable_debug:BOOL=ON
 enable_gtnets:BOOL=OFF
 
 //Whether the Java bindings are activated.
-enable_java:BOOL=OFF
+enable_java:BOOL=on
 
 //Jedule output of SimDAG.
 enable_jedule:BOOL=OFF
@@ -424,6 +454,9 @@ pipol_user:STRING=
 //Whether Release Mode is activated (disable tests on experimental
 // parts)
 release:BOOL=ON
+
+//Dependencies for the target
+simgrid-java_LIB_DEPENDS:STATIC=general;simgrid;
 
 //Dependencies for the target
 simgrid_LIB_DEPENDS:STATIC=general;-lm -pthread -lrt;
@@ -640,6 +673,10 @@ DOXYGEN_PATH-ADVANCED:INTERNAL=1
 F2C_EXE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: FIG2DEV_PATH
 FIG2DEV_PATH-ADVANCED:INTERNAL=1
+//Details about finding JNI
+FIND_PACKAGE_MESSAGE_DETAILS_JNI:INTERNAL=[/usr/lib/jvm/java-8-oracle/jre/lib/amd64/libjawt.so][/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so][/usr/lib/jvm/java-8-oracle/include][/usr/lib/jvm/java-8-oracle/include/linux][/usr/lib/jvm/java-8-oracle/include][v()]
+//Details about finding Java
+FIND_PACKAGE_MESSAGE_DETAILS_Java:INTERNAL=[/usr/lib/jvm/java-8-oracle/bin/java][/usr/lib/jvm/java-8-oracle/bin/jar][/usr/lib/jvm/java-8-oracle/bin/javac][/usr/lib/jvm/java-8-oracle/bin/javah][/usr/lib/jvm/java-8-oracle/bin/javadoc][v1.8.0()]
 //Details about finding Perl
 FIND_PACKAGE_MESSAGE_DETAILS_Perl:INTERNAL=[/usr/bin/perl][v5.14.2()]
 //ADVANCED property for variable: GCOV_PATH
@@ -778,6 +815,26 @@ HAVE_WINSOCK_H:INTERNAL=
 HGCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: JAVACOMMAND
 JAVACOMMAND-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_AWT_INCLUDE_PATH
+JAVA_AWT_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_AWT_LIBRARY
+JAVA_AWT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_INCLUDE_PATH
+JAVA_INCLUDE_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_INCLUDE_PATH2
+JAVA_INCLUDE_PATH2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: JAVA_JVM_LIBRARY
+JAVA_JVM_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAR_EXECUTABLE
+Java_JAR_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVAC_EXECUTABLE
+Java_JAVAC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVADOC_EXECUTABLE
+Java_JAVADOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVAH_EXECUTABLE
+Java_JAVAH_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Java_JAVA_EXECUTABLE
+Java_JAVA_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
 MAKECOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MEMORYCHECK_COMMAND

@@ -651,6 +651,45 @@ simgrid-colorizer/fast:
 .PHONY : simgrid-colorizer/fast
 
 #=============================================================================
+# Target rules for targets named simgrid-java
+
+# Build rule for target.
+simgrid-java: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simgrid-java
+.PHONY : simgrid-java
+
+# fast build rule for target.
+simgrid-java/fast:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/build
+.PHONY : simgrid-java/fast
+
+#=============================================================================
+# Target rules for targets named simgrid-java_jar
+
+# Build rule for target.
+simgrid-java_jar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simgrid-java_jar
+.PHONY : simgrid-java_jar
+
+# fast build rule for target.
+simgrid-java_jar/fast:
+	$(MAKE) -f CMakeFiles/simgrid-java_jar.dir/build.make CMakeFiles/simgrid-java_jar.dir/build
+.PHONY : simgrid-java_jar/fast
+
+#=============================================================================
+# Target rules for targets named simgrid-java_pre_jar
+
+# Build rule for target.
+simgrid-java_pre_jar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simgrid-java_pre_jar
+.PHONY : simgrid-java_pre_jar
+
+# fast build rule for target.
+simgrid-java_pre_jar/fast:
+	$(MAKE) -f CMakeFiles/simgrid-java_pre_jar.dir/build.make CMakeFiles/simgrid-java_pre_jar.dir/build
+.PHONY : simgrid-java_pre_jar/fast
+
+#=============================================================================
 # Target rules for targets named simgrid_update_xml
 
 # Build rule for target.
@@ -727,6 +766,227 @@ uninstall: cmake_check_build_system
 uninstall/fast:
 	$(MAKE) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
 .PHONY : uninstall/fast
+
+#=============================================================================
+# Target rules for targets named java_async
+
+# Build rule for target.
+java_async: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_async
+.PHONY : java_async
+
+# fast build rule for target.
+java_async/fast:
+	$(MAKE) -f examples/java/async/CMakeFiles/java_async.dir/build.make examples/java/async/CMakeFiles/java_async.dir/build
+.PHONY : java_async/fast
+
+#=============================================================================
+# Target rules for targets named java_bittorrent
+
+# Build rule for target.
+java_bittorrent: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_bittorrent
+.PHONY : java_bittorrent
+
+# fast build rule for target.
+java_bittorrent/fast:
+	$(MAKE) -f examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/build.make examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/build
+.PHONY : java_bittorrent/fast
+
+#=============================================================================
+# Target rules for targets named java_chord
+
+# Build rule for target.
+java_chord: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_chord
+.PHONY : java_chord
+
+# fast build rule for target.
+java_chord/fast:
+	$(MAKE) -f examples/java/chord/CMakeFiles/java_chord.dir/build.make examples/java/chord/CMakeFiles/java_chord.dir/build
+.PHONY : java_chord/fast
+
+#=============================================================================
+# Target rules for targets named java_cloud
+
+# Build rule for target.
+java_cloud: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_cloud
+.PHONY : java_cloud
+
+# fast build rule for target.
+java_cloud/fast:
+	$(MAKE) -f examples/java/cloud/CMakeFiles/java_cloud.dir/build.make examples/java/cloud/CMakeFiles/java_cloud.dir/build
+.PHONY : java_cloud/fast
+
+#=============================================================================
+# Target rules for targets named java_commTime
+
+# Build rule for target.
+java_commTime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_commTime
+.PHONY : java_commTime
+
+# fast build rule for target.
+java_commTime/fast:
+	$(MAKE) -f examples/java/commTime/CMakeFiles/java_commTime.dir/build.make examples/java/commTime/CMakeFiles/java_commTime.dir/build
+.PHONY : java_commTime/fast
+
+#=============================================================================
+# Target rules for targets named java_io
+
+# Build rule for target.
+java_io: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_io
+.PHONY : java_io
+
+# fast build rule for target.
+java_io/fast:
+	$(MAKE) -f examples/java/io/CMakeFiles/java_io.dir/build.make examples/java/io/CMakeFiles/java_io.dir/build
+.PHONY : java_io/fast
+
+#=============================================================================
+# Target rules for targets named java_kademlia
+
+# Build rule for target.
+java_kademlia: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_kademlia
+.PHONY : java_kademlia
+
+# fast build rule for target.
+java_kademlia/fast:
+	$(MAKE) -f examples/java/kademlia/CMakeFiles/java_kademlia.dir/build.make examples/java/kademlia/CMakeFiles/java_kademlia.dir/build
+.PHONY : java_kademlia/fast
+
+#=============================================================================
+# Target rules for targets named java_master_slave_bypass
+
+# Build rule for target.
+java_master_slave_bypass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_master_slave_bypass
+.PHONY : java_master_slave_bypass
+
+# fast build rule for target.
+java_master_slave_bypass/fast:
+	$(MAKE) -f examples/java/master_slave_bypass/CMakeFiles/java_master_slave_bypass.dir/build.make examples/java/master_slave_bypass/CMakeFiles/java_master_slave_bypass.dir/build
+.PHONY : java_master_slave_bypass/fast
+
+#=============================================================================
+# Target rules for targets named java_master_slave_kill
+
+# Build rule for target.
+java_master_slave_kill: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_master_slave_kill
+.PHONY : java_master_slave_kill
+
+# fast build rule for target.
+java_master_slave_kill/fast:
+	$(MAKE) -f examples/java/master_slave_kill/CMakeFiles/java_master_slave_kill.dir/build.make examples/java/master_slave_kill/CMakeFiles/java_master_slave_kill.dir/build
+.PHONY : java_master_slave_kill/fast
+
+#=============================================================================
+# Target rules for targets named java_masterslave
+
+# Build rule for target.
+java_masterslave: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_masterslave
+.PHONY : java_masterslave
+
+# fast build rule for target.
+java_masterslave/fast:
+	$(MAKE) -f examples/java/masterslave/CMakeFiles/java_masterslave.dir/build.make examples/java/masterslave/CMakeFiles/java_masterslave.dir/build
+.PHONY : java_masterslave/fast
+
+#=============================================================================
+# Target rules for targets named java_migration
+
+# Build rule for target.
+java_migration: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_migration
+.PHONY : java_migration
+
+# fast build rule for target.
+java_migration/fast:
+	$(MAKE) -f examples/java/migration/CMakeFiles/java_migration.dir/build.make examples/java/migration/CMakeFiles/java_migration.dir/build
+.PHONY : java_migration/fast
+
+#=============================================================================
+# Target rules for targets named java_mutualExclusion
+
+# Build rule for target.
+java_mutualExclusion: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_mutualExclusion
+.PHONY : java_mutualExclusion
+
+# fast build rule for target.
+java_mutualExclusion/fast:
+	$(MAKE) -f examples/java/mutualExclusion/CMakeFiles/java_mutualExclusion.dir/build.make examples/java/mutualExclusion/CMakeFiles/java_mutualExclusion.dir/build
+.PHONY : java_mutualExclusion/fast
+
+#=============================================================================
+# Target rules for targets named java_pingPong
+
+# Build rule for target.
+java_pingPong: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_pingPong
+.PHONY : java_pingPong
+
+# fast build rule for target.
+java_pingPong/fast:
+	$(MAKE) -f examples/java/pingPong/CMakeFiles/java_pingPong.dir/build.make examples/java/pingPong/CMakeFiles/java_pingPong.dir/build
+.PHONY : java_pingPong/fast
+
+#=============================================================================
+# Target rules for targets named java_priority
+
+# Build rule for target.
+java_priority: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_priority
+.PHONY : java_priority
+
+# fast build rule for target.
+java_priority/fast:
+	$(MAKE) -f examples/java/priority/CMakeFiles/java_priority.dir/build.make examples/java/priority/CMakeFiles/java_priority.dir/build
+.PHONY : java_priority/fast
+
+#=============================================================================
+# Target rules for targets named java_startKillTime
+
+# Build rule for target.
+java_startKillTime: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_startKillTime
+.PHONY : java_startKillTime
+
+# fast build rule for target.
+java_startKillTime/fast:
+	$(MAKE) -f examples/java/startKillTime/CMakeFiles/java_startKillTime.dir/build.make examples/java/startKillTime/CMakeFiles/java_startKillTime.dir/build
+.PHONY : java_startKillTime/fast
+
+#=============================================================================
+# Target rules for targets named java_suspend
+
+# Build rule for target.
+java_suspend: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_suspend
+.PHONY : java_suspend
+
+# fast build rule for target.
+java_suspend/fast:
+	$(MAKE) -f examples/java/suspend/CMakeFiles/java_suspend.dir/build.make examples/java/suspend/CMakeFiles/java_suspend.dir/build
+.PHONY : java_suspend/fast
+
+#=============================================================================
+# Target rules for targets named java_tracing
+
+# Build rule for target.
+java_tracing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 java_tracing
+.PHONY : java_tracing
+
+# fast build rule for target.
+java_tracing/fast:
+	$(MAKE) -f examples/java/tracing/CMakeFiles/java_tracing.dir/build.make examples/java/tracing/CMakeFiles/java_tracing.dir/build
+.PHONY : java_tracing/fast
 
 #=============================================================================
 # Target rules for targets named actions
@@ -2675,6 +2935,342 @@ src/bindings/bindings_global.s: src/bindings/bindings_global.c.s
 src/bindings/bindings_global.c.s:
 	$(MAKE) -f CMakeFiles/simgrid.dir/build.make CMakeFiles/simgrid.dir/src/bindings/bindings_global.c.s
 .PHONY : src/bindings/bindings_global.c.s
+
+src/bindings/java/jmsg.o: src/bindings/java/jmsg.c.o
+.PHONY : src/bindings/java/jmsg.o
+
+# target to build an object file
+src/bindings/java/jmsg.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg.c.o
+.PHONY : src/bindings/java/jmsg.c.o
+
+src/bindings/java/jmsg.i: src/bindings/java/jmsg.c.i
+.PHONY : src/bindings/java/jmsg.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg.c.i
+.PHONY : src/bindings/java/jmsg.c.i
+
+src/bindings/java/jmsg.s: src/bindings/java/jmsg.c.s
+.PHONY : src/bindings/java/jmsg.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg.c.s
+.PHONY : src/bindings/java/jmsg.c.s
+
+src/bindings/java/jmsg_as.o: src/bindings/java/jmsg_as.c.o
+.PHONY : src/bindings/java/jmsg_as.o
+
+# target to build an object file
+src/bindings/java/jmsg_as.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_as.c.o
+.PHONY : src/bindings/java/jmsg_as.c.o
+
+src/bindings/java/jmsg_as.i: src/bindings/java/jmsg_as.c.i
+.PHONY : src/bindings/java/jmsg_as.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_as.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_as.c.i
+.PHONY : src/bindings/java/jmsg_as.c.i
+
+src/bindings/java/jmsg_as.s: src/bindings/java/jmsg_as.c.s
+.PHONY : src/bindings/java/jmsg_as.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_as.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_as.c.s
+.PHONY : src/bindings/java/jmsg_as.c.s
+
+src/bindings/java/jmsg_comm.o: src/bindings/java/jmsg_comm.c.o
+.PHONY : src/bindings/java/jmsg_comm.o
+
+# target to build an object file
+src/bindings/java/jmsg_comm.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_comm.c.o
+.PHONY : src/bindings/java/jmsg_comm.c.o
+
+src/bindings/java/jmsg_comm.i: src/bindings/java/jmsg_comm.c.i
+.PHONY : src/bindings/java/jmsg_comm.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_comm.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_comm.c.i
+.PHONY : src/bindings/java/jmsg_comm.c.i
+
+src/bindings/java/jmsg_comm.s: src/bindings/java/jmsg_comm.c.s
+.PHONY : src/bindings/java/jmsg_comm.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_comm.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_comm.c.s
+.PHONY : src/bindings/java/jmsg_comm.c.s
+
+src/bindings/java/jmsg_file.o: src/bindings/java/jmsg_file.c.o
+.PHONY : src/bindings/java/jmsg_file.o
+
+# target to build an object file
+src/bindings/java/jmsg_file.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_file.c.o
+.PHONY : src/bindings/java/jmsg_file.c.o
+
+src/bindings/java/jmsg_file.i: src/bindings/java/jmsg_file.c.i
+.PHONY : src/bindings/java/jmsg_file.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_file.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_file.c.i
+.PHONY : src/bindings/java/jmsg_file.c.i
+
+src/bindings/java/jmsg_file.s: src/bindings/java/jmsg_file.c.s
+.PHONY : src/bindings/java/jmsg_file.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_file.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_file.c.s
+.PHONY : src/bindings/java/jmsg_file.c.s
+
+src/bindings/java/jmsg_host.o: src/bindings/java/jmsg_host.c.o
+.PHONY : src/bindings/java/jmsg_host.o
+
+# target to build an object file
+src/bindings/java/jmsg_host.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_host.c.o
+.PHONY : src/bindings/java/jmsg_host.c.o
+
+src/bindings/java/jmsg_host.i: src/bindings/java/jmsg_host.c.i
+.PHONY : src/bindings/java/jmsg_host.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_host.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_host.c.i
+.PHONY : src/bindings/java/jmsg_host.c.i
+
+src/bindings/java/jmsg_host.s: src/bindings/java/jmsg_host.c.s
+.PHONY : src/bindings/java/jmsg_host.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_host.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_host.c.s
+.PHONY : src/bindings/java/jmsg_host.c.s
+
+src/bindings/java/jmsg_process.o: src/bindings/java/jmsg_process.c.o
+.PHONY : src/bindings/java/jmsg_process.o
+
+# target to build an object file
+src/bindings/java/jmsg_process.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_process.c.o
+.PHONY : src/bindings/java/jmsg_process.c.o
+
+src/bindings/java/jmsg_process.i: src/bindings/java/jmsg_process.c.i
+.PHONY : src/bindings/java/jmsg_process.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_process.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_process.c.i
+.PHONY : src/bindings/java/jmsg_process.c.i
+
+src/bindings/java/jmsg_process.s: src/bindings/java/jmsg_process.c.s
+.PHONY : src/bindings/java/jmsg_process.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_process.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_process.c.s
+.PHONY : src/bindings/java/jmsg_process.c.s
+
+src/bindings/java/jmsg_rngstream.o: src/bindings/java/jmsg_rngstream.c.o
+.PHONY : src/bindings/java/jmsg_rngstream.o
+
+# target to build an object file
+src/bindings/java/jmsg_rngstream.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_rngstream.c.o
+.PHONY : src/bindings/java/jmsg_rngstream.c.o
+
+src/bindings/java/jmsg_rngstream.i: src/bindings/java/jmsg_rngstream.c.i
+.PHONY : src/bindings/java/jmsg_rngstream.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_rngstream.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_rngstream.c.i
+.PHONY : src/bindings/java/jmsg_rngstream.c.i
+
+src/bindings/java/jmsg_rngstream.s: src/bindings/java/jmsg_rngstream.c.s
+.PHONY : src/bindings/java/jmsg_rngstream.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_rngstream.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_rngstream.c.s
+.PHONY : src/bindings/java/jmsg_rngstream.c.s
+
+src/bindings/java/jmsg_synchro.o: src/bindings/java/jmsg_synchro.c.o
+.PHONY : src/bindings/java/jmsg_synchro.o
+
+# target to build an object file
+src/bindings/java/jmsg_synchro.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_synchro.c.o
+.PHONY : src/bindings/java/jmsg_synchro.c.o
+
+src/bindings/java/jmsg_synchro.i: src/bindings/java/jmsg_synchro.c.i
+.PHONY : src/bindings/java/jmsg_synchro.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_synchro.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_synchro.c.i
+.PHONY : src/bindings/java/jmsg_synchro.c.i
+
+src/bindings/java/jmsg_synchro.s: src/bindings/java/jmsg_synchro.c.s
+.PHONY : src/bindings/java/jmsg_synchro.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_synchro.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_synchro.c.s
+.PHONY : src/bindings/java/jmsg_synchro.c.s
+
+src/bindings/java/jmsg_task.o: src/bindings/java/jmsg_task.c.o
+.PHONY : src/bindings/java/jmsg_task.o
+
+# target to build an object file
+src/bindings/java/jmsg_task.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_task.c.o
+.PHONY : src/bindings/java/jmsg_task.c.o
+
+src/bindings/java/jmsg_task.i: src/bindings/java/jmsg_task.c.i
+.PHONY : src/bindings/java/jmsg_task.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_task.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_task.c.i
+.PHONY : src/bindings/java/jmsg_task.c.i
+
+src/bindings/java/jmsg_task.s: src/bindings/java/jmsg_task.c.s
+.PHONY : src/bindings/java/jmsg_task.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_task.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_task.c.s
+.PHONY : src/bindings/java/jmsg_task.c.s
+
+src/bindings/java/jmsg_vm.o: src/bindings/java/jmsg_vm.c.o
+.PHONY : src/bindings/java/jmsg_vm.o
+
+# target to build an object file
+src/bindings/java/jmsg_vm.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_vm.c.o
+.PHONY : src/bindings/java/jmsg_vm.c.o
+
+src/bindings/java/jmsg_vm.i: src/bindings/java/jmsg_vm.c.i
+.PHONY : src/bindings/java/jmsg_vm.i
+
+# target to preprocess a source file
+src/bindings/java/jmsg_vm.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_vm.c.i
+.PHONY : src/bindings/java/jmsg_vm.c.i
+
+src/bindings/java/jmsg_vm.s: src/bindings/java/jmsg_vm.c.s
+.PHONY : src/bindings/java/jmsg_vm.s
+
+# target to generate assembly for a file
+src/bindings/java/jmsg_vm.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jmsg_vm.c.s
+.PHONY : src/bindings/java/jmsg_vm.c.s
+
+src/bindings/java/jtrace.o: src/bindings/java/jtrace.c.o
+.PHONY : src/bindings/java/jtrace.o
+
+# target to build an object file
+src/bindings/java/jtrace.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jtrace.c.o
+.PHONY : src/bindings/java/jtrace.c.o
+
+src/bindings/java/jtrace.i: src/bindings/java/jtrace.c.i
+.PHONY : src/bindings/java/jtrace.i
+
+# target to preprocess a source file
+src/bindings/java/jtrace.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jtrace.c.i
+.PHONY : src/bindings/java/jtrace.c.i
+
+src/bindings/java/jtrace.s: src/bindings/java/jtrace.c.s
+.PHONY : src/bindings/java/jtrace.s
+
+# target to generate assembly for a file
+src/bindings/java/jtrace.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jtrace.c.s
+.PHONY : src/bindings/java/jtrace.c.s
+
+src/bindings/java/jxbt_utilities.o: src/bindings/java/jxbt_utilities.c.o
+.PHONY : src/bindings/java/jxbt_utilities.o
+
+# target to build an object file
+src/bindings/java/jxbt_utilities.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jxbt_utilities.c.o
+.PHONY : src/bindings/java/jxbt_utilities.c.o
+
+src/bindings/java/jxbt_utilities.i: src/bindings/java/jxbt_utilities.c.i
+.PHONY : src/bindings/java/jxbt_utilities.i
+
+# target to preprocess a source file
+src/bindings/java/jxbt_utilities.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jxbt_utilities.c.i
+.PHONY : src/bindings/java/jxbt_utilities.c.i
+
+src/bindings/java/jxbt_utilities.s: src/bindings/java/jxbt_utilities.c.s
+.PHONY : src/bindings/java/jxbt_utilities.s
+
+# target to generate assembly for a file
+src/bindings/java/jxbt_utilities.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/jxbt_utilities.c.s
+.PHONY : src/bindings/java/jxbt_utilities.c.s
+
+src/bindings/java/smx_context_cojava.o: src/bindings/java/smx_context_cojava.c.o
+.PHONY : src/bindings/java/smx_context_cojava.o
+
+# target to build an object file
+src/bindings/java/smx_context_cojava.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/smx_context_cojava.c.o
+.PHONY : src/bindings/java/smx_context_cojava.c.o
+
+src/bindings/java/smx_context_cojava.i: src/bindings/java/smx_context_cojava.c.i
+.PHONY : src/bindings/java/smx_context_cojava.i
+
+# target to preprocess a source file
+src/bindings/java/smx_context_cojava.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/smx_context_cojava.c.i
+.PHONY : src/bindings/java/smx_context_cojava.c.i
+
+src/bindings/java/smx_context_cojava.s: src/bindings/java/smx_context_cojava.c.s
+.PHONY : src/bindings/java/smx_context_cojava.s
+
+# target to generate assembly for a file
+src/bindings/java/smx_context_cojava.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/smx_context_cojava.c.s
+.PHONY : src/bindings/java/smx_context_cojava.c.s
+
+src/bindings/java/smx_context_java.o: src/bindings/java/smx_context_java.c.o
+.PHONY : src/bindings/java/smx_context_java.o
+
+# target to build an object file
+src/bindings/java/smx_context_java.c.o:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/smx_context_java.c.o
+.PHONY : src/bindings/java/smx_context_java.c.o
+
+src/bindings/java/smx_context_java.i: src/bindings/java/smx_context_java.c.i
+.PHONY : src/bindings/java/smx_context_java.i
+
+# target to preprocess a source file
+src/bindings/java/smx_context_java.c.i:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/smx_context_java.c.i
+.PHONY : src/bindings/java/smx_context_java.c.i
+
+src/bindings/java/smx_context_java.s: src/bindings/java/smx_context_java.c.s
+.PHONY : src/bindings/java/smx_context_java.s
+
+# target to generate assembly for a file
+src/bindings/java/smx_context_java.c.s:
+	$(MAKE) -f CMakeFiles/simgrid-java.dir/build.make CMakeFiles/simgrid-java.dir/src/bindings/java/smx_context_java.c.s
+.PHONY : src/bindings/java/smx_context_java.c.s
 
 src/config_unit.o: src/config_unit.c.o
 .PHONY : src/config_unit.o
@@ -8247,6 +8843,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... simgrid"
 	@echo "... simgrid-colorizer"
+	@echo "... simgrid-java"
+	@echo "... simgrid-java_jar"
+	@echo "... simgrid-java_pre_jar"
 	@echo "... simgrid_update_xml"
 	@echo "... supernovae-clean"
 	@echo "... sync-gforge-doc"
@@ -8254,6 +8853,23 @@ help:
 	@echo "... test"
 	@echo "... testall"
 	@echo "... uninstall"
+	@echo "... java_async"
+	@echo "... java_bittorrent"
+	@echo "... java_chord"
+	@echo "... java_cloud"
+	@echo "... java_commTime"
+	@echo "... java_io"
+	@echo "... java_kademlia"
+	@echo "... java_master_slave_bypass"
+	@echo "... java_master_slave_kill"
+	@echo "... java_masterslave"
+	@echo "... java_migration"
+	@echo "... java_mutualExclusion"
+	@echo "... java_pingPong"
+	@echo "... java_priority"
+	@echo "... java_startKillTime"
+	@echo "... java_suspend"
+	@echo "... java_tracing"
 	@echo "... actions"
 	@echo "... bittorrent"
 	@echo "... bittorrent_platfgen"
@@ -8405,6 +9021,48 @@ help:
 	@echo "... src/bindings/bindings_global.o"
 	@echo "... src/bindings/bindings_global.i"
 	@echo "... src/bindings/bindings_global.s"
+	@echo "... src/bindings/java/jmsg.o"
+	@echo "... src/bindings/java/jmsg.i"
+	@echo "... src/bindings/java/jmsg.s"
+	@echo "... src/bindings/java/jmsg_as.o"
+	@echo "... src/bindings/java/jmsg_as.i"
+	@echo "... src/bindings/java/jmsg_as.s"
+	@echo "... src/bindings/java/jmsg_comm.o"
+	@echo "... src/bindings/java/jmsg_comm.i"
+	@echo "... src/bindings/java/jmsg_comm.s"
+	@echo "... src/bindings/java/jmsg_file.o"
+	@echo "... src/bindings/java/jmsg_file.i"
+	@echo "... src/bindings/java/jmsg_file.s"
+	@echo "... src/bindings/java/jmsg_host.o"
+	@echo "... src/bindings/java/jmsg_host.i"
+	@echo "... src/bindings/java/jmsg_host.s"
+	@echo "... src/bindings/java/jmsg_process.o"
+	@echo "... src/bindings/java/jmsg_process.i"
+	@echo "... src/bindings/java/jmsg_process.s"
+	@echo "... src/bindings/java/jmsg_rngstream.o"
+	@echo "... src/bindings/java/jmsg_rngstream.i"
+	@echo "... src/bindings/java/jmsg_rngstream.s"
+	@echo "... src/bindings/java/jmsg_synchro.o"
+	@echo "... src/bindings/java/jmsg_synchro.i"
+	@echo "... src/bindings/java/jmsg_synchro.s"
+	@echo "... src/bindings/java/jmsg_task.o"
+	@echo "... src/bindings/java/jmsg_task.i"
+	@echo "... src/bindings/java/jmsg_task.s"
+	@echo "... src/bindings/java/jmsg_vm.o"
+	@echo "... src/bindings/java/jmsg_vm.i"
+	@echo "... src/bindings/java/jmsg_vm.s"
+	@echo "... src/bindings/java/jtrace.o"
+	@echo "... src/bindings/java/jtrace.i"
+	@echo "... src/bindings/java/jtrace.s"
+	@echo "... src/bindings/java/jxbt_utilities.o"
+	@echo "... src/bindings/java/jxbt_utilities.i"
+	@echo "... src/bindings/java/jxbt_utilities.s"
+	@echo "... src/bindings/java/smx_context_cojava.o"
+	@echo "... src/bindings/java/smx_context_cojava.i"
+	@echo "... src/bindings/java/smx_context_cojava.s"
+	@echo "... src/bindings/java/smx_context_java.o"
+	@echo "... src/bindings/java/smx_context_java.i"
+	@echo "... src/bindings/java/smx_context_java.s"
 	@echo "... src/config_unit.o"
 	@echo "... src/config_unit.i"
 	@echo "... src/config_unit.s"

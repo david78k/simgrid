@@ -14,6 +14,9 @@
 /usr/local/bin/simgrid_update_xml
 /usr/local/lib/libsimgrid.so.3.9.90
 /usr/local/lib/libsimgrid.so
+/usr/local/lib/libsimgrid-java.so.3.9.90
+/usr/local/lib/libsimgrid-java.so
+/usr/local/java/simgrid.jar
 /usr/local/include/instr/instr.h
 /usr/local/include/msg/datatypes.h
 /usr/local/include/msg/msg.h

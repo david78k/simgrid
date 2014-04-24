@@ -169,6 +169,20 @@ depend:
 	cd /root/simgrid/simgrid && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+examples/java/kademlia/CMakeFiles/java_kademlia.dir/rule:
+	cd /root/simgrid/simgrid && $(MAKE) -f CMakeFiles/Makefile2 examples/java/kademlia/CMakeFiles/java_kademlia.dir/rule
+.PHONY : examples/java/kademlia/CMakeFiles/java_kademlia.dir/rule
+
+# Convenience name for target.
+java_kademlia: examples/java/kademlia/CMakeFiles/java_kademlia.dir/rule
+.PHONY : java_kademlia
+
+# fast build rule for target.
+java_kademlia/fast:
+	cd /root/simgrid/simgrid && $(MAKE) -f examples/java/kademlia/CMakeFiles/java_kademlia.dir/build.make examples/java/kademlia/CMakeFiles/java_kademlia.dir/build
+.PHONY : java_kademlia/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -179,6 +193,7 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... java_kademlia"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"

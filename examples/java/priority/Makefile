@@ -169,6 +169,20 @@ depend:
 	cd /root/simgrid/simgrid && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+examples/java/priority/CMakeFiles/java_priority.dir/rule:
+	cd /root/simgrid/simgrid && $(MAKE) -f CMakeFiles/Makefile2 examples/java/priority/CMakeFiles/java_priority.dir/rule
+.PHONY : examples/java/priority/CMakeFiles/java_priority.dir/rule
+
+# Convenience name for target.
+java_priority: examples/java/priority/CMakeFiles/java_priority.dir/rule
+.PHONY : java_priority
+
+# fast build rule for target.
+java_priority/fast:
+	cd /root/simgrid/simgrid && $(MAKE) -f examples/java/priority/CMakeFiles/java_priority.dir/build.make examples/java/priority/CMakeFiles/java_priority.dir/build
+.PHONY : java_priority/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -179,6 +193,7 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... java_priority"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"

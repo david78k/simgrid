@@ -169,6 +169,20 @@ depend:
 	cd /root/simgrid/simgrid && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/rule:
+	cd /root/simgrid/simgrid && $(MAKE) -f CMakeFiles/Makefile2 examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/rule
+.PHONY : examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/rule
+
+# Convenience name for target.
+java_bittorrent: examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/rule
+.PHONY : java_bittorrent
+
+# fast build rule for target.
+java_bittorrent/fast:
+	cd /root/simgrid/simgrid && $(MAKE) -f examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/build.make examples/java/bittorrent/CMakeFiles/java_bittorrent.dir/build
+.PHONY : java_bittorrent/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -179,6 +193,7 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... java_bittorrent"
 	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
