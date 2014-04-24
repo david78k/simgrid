@@ -65,9 +65,10 @@ main (int argc, char *argv[])
   for (count = 0; count < samples; count++)
     {
       /* Generate random numbers from a distribution, Normal for this */
-      //current_random_no = randn (mu, std);
+      current_random_no = randn (mu, std);
       //current_random_no = normal (mu, std);
-      current_random_no = exponential (mu);
+      //current_random_no = exponential (mu);
+	printf("%f ", current_random_no);
  
       /* Check which range the current sample falls */
       for (i = 0, bin = -1; i < bins; i++)
@@ -94,6 +95,7 @@ main (int argc, char *argv[])
           flag = 1;
         }
     }
+	printf("\n");
  
   /* Find the max value of the bin counters. This is used to scale the histogram */
   for (i = 0; i < bins; i++)
@@ -136,6 +138,7 @@ main (int argc, char *argv[])
   return 0;
 }
 
+// mean = 1/lambda  
 double exponential(double mean)
 {
         //Generate a random number between 0 and 1.
