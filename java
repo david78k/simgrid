@@ -1,1 +1,1 @@
-examples/java/cloud
+examples/java
